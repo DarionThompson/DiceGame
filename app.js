@@ -9,14 +9,16 @@ GAME RULES:
 
 */
 
-var scores, roundScore, activePlayer, dice;
+var scores, roundScore, activePlayer, dice, secondPlayer;
 
 scores = [0,0];
 roundScore = 0; 
 activePlayer = 1;
+secondPlayer = 1;
 
 dice = Math.floor(Math.random()* 6)+ 1;
 
 document.querySelector('#current-' + activePlayer).textContent = dice;
 
-//document.querySelector('current-' + activePlayer).innerHTML =
+var diceDOM = document.querySelector('.dice');
+diceDOM.style.display = 'none';
